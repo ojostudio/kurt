@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeronaves — Wireframe</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo-slot"><span class="logo-box"></span> KURT</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="a-kurt.html">A Kurt</a></li>
+        <li><a href="aeronaves.html">Aeronaves</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="contato.html" class="nav-cta">Falar com um especialista</a>
+    <button class="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap breadcrumb"><a href="index.html">Início</a> / Aeronaves</div>
+
+  <section class="tight">
+    <div class="wrap">
+      <span class="eyebrow">Vitrine Kurt</span>
+      <h1>Aeronaves particulares novas e seminovas</h1>
+      <p class="lead" style="margin-top:16px;">Frota selecionada, negociação especializada e suporte completo do primeiro contato à entrega. Cada aeronave passa por avaliação técnica criteriosa antes de compor a vitrine Kurt.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+
+      <form id="filtros-vitrine" class="filters-bar">
+        <select><option>Fabricante</option><option>Embraer</option><option>Diamond</option><option>Cessna</option><option>Beechcraft</option></select>
+        <select><option>Categoria</option><option>Jato executivo</option><option>Turboélice</option><option>Monomotor</option></select>
+        <select><option>Ano</option><option>2023 – 2025</option><option>2019 – 2022</option><option>Anterior a 2019</option></select>
+        <select><option>Faixa de preço</option><option>Até USD 2M</option><option>USD 2M – 5M</option><option>Acima de USD 5M</option></select>
+        <input type="text" placeholder="Buscar por modelo...">
+        <button type="submit" class="btn btn-solid">Filtrar</button>
+      </form>
+
+      <div class="aircraft-grid">
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — aeronave em voo</span></div>
+          <div class="info">
+            <div class="tagline">Embraer</div>
+            <h3>Phenom 300</h3>
+            <div class="specs"><span>Ano 2019</span><span>1.240 h</span><span>Até 8 pass.</span></div>
+            <span class="price">USD 7.800.000</span>
+          </div>
+        </a>
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — aeronave em pátio</span></div>
+          <div class="info">
+            <div class="tagline">Diamond</div>
+            <h3>DA62</h3>
+            <div class="specs"><span>Ano 2021</span><span>780 h</span><span>Até 5 pass.</span></div>
+            <span class="price">USD 3.450.000</span>
+          </div>
+        </a>
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — cabine interna</span></div>
+          <div class="info">
+            <div class="tagline">Cessna</div>
+            <h3>Citation CJ3+</h3>
+            <div class="specs"><span>Ano 2018</span><span>1.650 h</span><span>Até 9 pass.</span></div>
+            <span class="price">USD 6.200.000</span>
+          </div>
+        </a>
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — aeronave estacionada</span></div>
+          <div class="info">
+            <div class="tagline">Beechcraft</div>
+            <h3>King Air 350i</h3>
+            <div class="specs"><span>Ano 2017</span><span>2.100 h</span><span>Até 11 pass.</span></div>
+            <span class="price">USD 4.900.000</span>
+          </div>
+        </a>
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — decolagem</span></div>
+          <div class="info">
+            <div class="tagline">Embraer</div>
+            <h3>Legacy 500</h3>
+            <div class="specs"><span>Ano 2016</span><span>2.480 h</span><span>Até 12 pass.</span></div>
+            <span class="price">USD 11.500.000</span>
+          </div>
+        </a>
+
+        <a href="aeronave-detalhe.html" class="aircraft-card">
+          <div class="ph"><span>Foto — hangar</span></div>
+          <div class="info">
+            <div class="tagline">Pilatus</div>
+            <h3>PC-12 NGX</h3>
+            <div class="specs"><span>Ano 2020</span><span>950 h</span><span>Até 9 pass.</span></div>
+            <span class="price">USD 5.100.000</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">›</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="gray tight">
+    <div class="wrap">
+      <div class="cta-final">
+        <span class="eyebrow">Não encontrou o modelo ideal?</span>
+        <h2>Nossa curadoria vai além da vitrine</h2>
+        <p>Conte com a consultoria Kurt para localizar, avaliar e negociar a aeronave certa para sua missão — mesmo que ainda não esteja em nosso catálogo.</p>
+        <a href="contato.html" class="btn btn-solid">Falar com um especialista</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Kurt</h4>
+        <p style="font-size:13px; max-width:260px;">Consultoria de ativos aeronáuticos, desembaraço legal e hangaragem para quem exige excelência em cada voo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="a-kurt.html">A Kurt</a></li>
+          <li><a href="aeronaves.html">Aeronaves</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="contato.html">Fale conosco</a></li>
+          <li>[telefone placeholder]</li>
+          <li>[e-mail placeholder]</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="a-kurt.html">A Kurt</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Kurt</span>
+      <span>Wireframe de estrutura — desenvolvimento OJO Studio</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

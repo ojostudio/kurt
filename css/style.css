@@ -1,0 +1,491 @@
+/* ===================================================================
+   KURT — WIREFRAME (somente estrutura, preto/branco, sem identidade)
+   =================================================================== */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --preto: #111111;
+  --cinza-1: #333333;
+  --cinza-2: #666666;
+  --cinza-3: #999999;
+  --cinza-4: #cccccc;
+  --cinza-5: #e4e4e4;
+  --cinza-6: #f2f2f2;
+  --branco: #ffffff;
+  --borda: 1px solid #b8b8b8;
+  --maxw: 1180px;
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--preto);
+  background: var(--branco);
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+a{ color: inherit; text-decoration: none; }
+ul{ list-style: none; }
+img{ max-width: 100%; display: block; }
+
+.wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- tag de aviso de wireframe ---------- */
+.wf-flag{
+  background: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+}
+
+/* ---------- placeholders de imagem ---------- */
+.ph{
+  background: repeating-linear-gradient(
+    45deg,
+    var(--cinza-6),
+    var(--cinza-6) 10px,
+    var(--cinza-5) 10px,
+    var(--cinza-5) 20px
+  );
+  border: var(--borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinza-3);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  text-align: center;
+  min-height: 120px;
+}
+.ph span{ padding: 8px; }
+
+.ph-icon{
+  width: 44px;
+  height: 44px;
+  border: var(--borda);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--cinza-3);
+  flex: none;
+}
+
+/* ---------- header ---------- */
+header{
+  border-bottom: var(--borda);
+  position: sticky;
+  top: 0;
+  background: var(--branco);
+  z-index: 50;
+}
+.nav-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.logo-slot{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.logo-box{
+  width: 30px; height: 30px;
+  border: 1.5px solid var(--preto);
+}
+nav.main-nav ul{
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+nav.main-nav a{
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s;
+}
+nav.main-nav a:hover, nav.main-nav a.active{
+  border-bottom: 1px solid var(--preto);
+}
+.nav-cta{
+  border: 1px solid var(--preto);
+  padding: 9px 18px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.nav-cta:hover{ background: var(--preto); color: var(--branco); }
+
+.menu-toggle{
+  display: none;
+  border: 1px solid var(--preto);
+  background: none;
+  width: 38px; height: 34px;
+  cursor: pointer;
+}
+.menu-toggle span{
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--preto);
+  margin: 4px auto;
+}
+
+/* ---------- footer ---------- */
+footer{
+  border-top: var(--borda);
+  margin-top: 100px;
+  padding: 60px 0 30px;
+  font-size: 13px;
+  color: var(--cinza-2);
+}
+.footer-grid{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.footer-col h4{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--preto);
+  margin-bottom: 14px;
+}
+.footer-col ul li{ margin-bottom: 8px; }
+.footer-col ul a:hover{ text-decoration: underline; }
+.footer-bottom{
+  border-top: var(--borda);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--cinza-3);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* ---------- seções genéricas ---------- */
+section{ padding: 90px 0; }
+section.tight{ padding: 60px 0; }
+section.gray{ background: var(--cinza-6); }
+.eyebrow{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--cinza-2);
+  margin-bottom: 16px;
+  display: block;
+}
+h1{ font-size: 44px; line-height: 1.15; font-weight: bold; }
+h2{ font-size: 32px; line-height: 1.2; font-weight: bold; margin-bottom: 18px; }
+h3{ font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+p.lead{ font-size: 18px; color: var(--cinza-1); max-width: 640px; }
+p{ color: var(--cinza-1); }
+.divider{ border-top: var(--borda); margin: 60px 0; }
+
+/* ---------- hero ---------- */
+.hero{
+  padding: 70px 0 0;
+}
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 70px;
+}
+.hero-text .tag-line{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--cinza-2);
+  margin-bottom: 20px;
+}
+.hero-text h1{ margin-bottom: 22px; }
+.btn-row{ display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+.btn{
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border: 1px solid var(--preto);
+}
+.btn-solid{ background: var(--preto); color: var(--branco); }
+.btn-solid:hover{ background: var(--cinza-1); }
+.btn-outline:hover{ background: var(--preto); color: var(--branco); }
+.hero-media .ph{ aspect-ratio: 4/3; }
+
+/* ---------- grids de conteúdo ---------- */
+.grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.grid-3{ display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+.grid-4{ display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; }
+
+.card{
+  border: var(--borda);
+  padding: 32px 28px;
+}
+.card .ph-icon{ margin-bottom: 20px; }
+.card h3{ margin-top: 4px; }
+.card p{ font-size: 14px; }
+
+/* ---------- valores / estrela guia ---------- */
+.pillars{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  border-top: var(--borda);
+  border-left: var(--borda);
+}
+.pillar{
+  border-right: var(--borda);
+  border-bottom: var(--borda);
+  padding: 40px 32px;
+}
+.pillar .num{
+  font-size: 12px;
+  color: var(--cinza-3);
+  letter-spacing: .1em;
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* ---------- listagem de aeronaves ---------- */
+.filters-bar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border: var(--borda);
+  padding: 18px;
+  margin-bottom: 40px;
+}
+.filters-bar select, .filters-bar input{
+  border: var(--borda);
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--cinza-1);
+  background: var(--branco);
+}
+.filters-bar select{ min-width: 160px; }
+.filters-bar input{ flex: 1; min-width: 200px; }
+
+.aircraft-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.aircraft-card{
+  border: var(--borda);
+  display: block;
+  transition: box-shadow .15s;
+}
+.aircraft-card:hover{ box-shadow: 0 0 0 1px var(--preto); }
+.aircraft-card .ph{ aspect-ratio: 4/3; border-bottom: var(--borda); border-left: 0; border-right: 0; border-top: 0; }
+.aircraft-card .info{ padding: 20px; }
+.aircraft-card .tagline{
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--cinza-3);
+  margin-bottom: 6px;
+}
+.aircraft-card h3{ margin-bottom: 4px; }
+.aircraft-card .specs{
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--cinza-2);
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+.aircraft-card .price{
+  border: var(--borda);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+.pagination a{
+  border: var(--borda);
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+}
+.pagination a.active{ background: var(--preto); color: var(--branco); }
+
+/* ---------- ficha de aeronave ---------- */
+.gallery-main{ aspect-ratio: 16/9; margin-bottom: 14px; }
+.gallery-thumbs{ display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+.gallery-thumbs .ph{ aspect-ratio: 4/3; min-height: 60px; font-size: 9px; }
+
+.spec-table{ width: 100%; border-collapse: collapse; font-size: 14px; }
+.spec-table tr{ border-bottom: var(--borda); }
+.spec-table td{ padding: 14px 4px; }
+.spec-table td:first-child{ color: var(--cinza-2); width: 45%; }
+.spec-table td:last-child{ font-weight: bold; text-align: right; }
+
+.sticky-cta{
+  border: var(--borda);
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+.sticky-cta .price-tag{ font-size: 26px; font-weight: bold; margin: 10px 0 4px; }
+.sticky-cta .btn{ width: 100%; text-align: center; margin-top: 14px; }
+
+/* ---------- formulários ---------- */
+form .field{ margin-bottom: 20px; }
+form label{
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--cinza-2);
+  margin-bottom: 8px;
+}
+form input, form select, form textarea{
+  width: 100%;
+  border: var(--borda);
+  padding: 13px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--branco);
+  color: var(--preto);
+}
+form textarea{ min-height: 120px; resize: vertical; }
+.field-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* ---------- quote / estrela guia destaque ---------- */
+.quote-block{
+  border-top: var(--borda);
+  border-bottom: var(--borda);
+  padding: 70px 0;
+  text-align: center;
+}
+.quote-block p{
+  font-size: 28px;
+  color: var(--preto);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* ---------- steps / processo ---------- */
+.steps{ counter-reset: step; }
+.step{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: var(--borda);
+}
+.step:first-child{ border-top: var(--borda); }
+.step .step-num{
+  counter-increment: step;
+  font-size: 22px;
+  color: var(--cinza-3);
+}
+.step .step-num::before{ content: counter(step, decimal-leading-zero); }
+
+/* ---------- breadcrumb ---------- */
+.breadcrumb{
+  font-size: 12px;
+  color: var(--cinza-3);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 24px 0 0;
+}
+.breadcrumb a:hover{ text-decoration: underline; }
+
+/* ---------- faq ---------- */
+.faq-item{ border-bottom: var(--borda); }
+.faq-q{
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.faq-q .plus{ font-size: 18px; color: var(--cinza-2); }
+.faq-a{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .2s ease;
+}
+.faq-a p{ padding-bottom: 22px; font-size: 14px; max-width: 720px; }
+.faq-item.open .faq-a{ max-height: 300px; }
+.faq-item.open .plus{ transform: rotate(45deg); }
+
+/* ---------- CTA final ---------- */
+.cta-final{
+  border: var(--borda);
+  padding: 70px 40px;
+  text-align: center;
+}
+.cta-final h2{ margin-bottom: 14px; }
+.cta-final p{ max-width: 560px; margin: 0 auto 30px; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 900px){
+  nav.main-nav, .nav-cta{ display: none; }
+  .menu-toggle{ display: block; }
+  .hero-grid, .grid-2{ grid-template-columns: 1fr; }
+  .grid-3, .aircraft-grid{ grid-template-columns: repeat(2,1fr); }
+  .grid-4{ grid-template-columns: repeat(2,1fr); }
+  .pillars{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+  h1{ font-size: 32px; }
+  h2{ font-size: 26px; }
+}
+@media (max-width: 560px){
+  .grid-3, .grid-4, .aircraft-grid{ grid-template-columns: 1fr; }
+  .field-row{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1fr; }
+  .gallery-thumbs{ grid-template-columns: repeat(3,1fr); }
+  .quote-block p{ font-size: 20px; }
+}
+
+/* nav mobile aberto */
+body.menu-open nav.main-nav{
+  display: block;
+  position: fixed;
+  top: 68px; left: 0; right: 0; bottom: 0;
+  background: var(--branco);
+  padding: 30px 24px;
+  z-index: 40;
+}
+body.menu-open nav.main-nav ul{ flex-direction: column; gap: 0; }
+body.menu-open nav.main-nav a{ display: block; padding: 16px 0; border-bottom: var(--borda); }
+body.menu-open .nav-cta{ display: block; margin-top: 20px; text-align: center; }
